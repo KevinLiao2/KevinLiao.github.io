@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的个人主页</title>
+    <style>
+        /* 基本样式 */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #00d4ff;
+            text-transform: uppercase;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* 动画效果 */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        section {
+            padding: 80px 20px 20px;
+            margin: 60px auto;
+            max-width: 1200px;
+        }
+
+        section:nth-child(odd) {
+            background-color: #121212;
+        }
+
+        h2 {
+            color: #00d4ff;
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #00d4ff;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+        }
+
+        /* 卡片设计 */
+        .card {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        /* 按钮样式 */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00d4ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #00a3cc;
+        }
+
+        /* 列表样式 */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* 社交媒体图标 */
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1.5em;
+            color: #00d4ff;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #00a3cc;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>我的个人主页</h1>
+    </header>
+
+    <section id="about">
+        <h2>自我介绍</h2>
+        <div class="card">
+            <p>你好，我是[你的名字]，一名专注于人工智能、机器学习和Web开发的开发者。我的热情在于将先进的技术变为现实世界中的实际应用。</p>
+        </div>
+    </section>
+
+    <section id="company">
+        <h2>公司介绍</h2>
+        <div class="card">
+            <p>我目前在[公司名称]担任[职位]，公司致力于[公司使命或目标]。我们为客户提供最具创新性的技术解决方案，帮助他们应对复杂的技术挑战。</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>项目展示</h2>
+        <div class="card">
+            <h3>项目一：智能推荐系统</h3>
+            <p>开发了一个基于用户行为的推荐系统，能够自动根据偏好提供个性化推荐。</p>
+            <a href="#" class="button">了解更多</a>
+        </div>
+        <div class="card">
+            <h3>项目二：响应式Web应用</h3>
+            <p>设计并实现了一款支持移动端和PC端的响应式Web应用，集成了多个API，提升了用户体验。</p>
+            <a href="#" class="button">了解更多</a>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>技能</h2>
+        <div class="card">
+            <ul>
+                <li>编程语言：Python, JavaScript, C++</li>
+                <li>Web开发：HTML, CSS, React, Node.js</li>
+                <li>机器学习：TensorFlow, PyTorch, Scikit-learn</li>
+                <li>数据库：MySQL, MongoDB</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>联系方式</h2>
+        <div class="card">
+            <p>如需联系我，请发送邮件至 <a href="mailto:your.email@example.com" class="button">发送邮件</a>，或通过社交平台找到我：</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+                <a href="https://discord.com/yourusername" target="_blank">Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 我的个人主页 | 版权所有</p>
+    </footer>
+
+</body>
+
+</html>
